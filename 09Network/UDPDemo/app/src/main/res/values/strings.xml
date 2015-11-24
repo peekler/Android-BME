@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UDPDemo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="btnSend">Send</string>
+    <string name="tvMsgToSend">Message to send:</string>
+    <string name="btnStopServer">Stop server</string>
+    <string name="btnStartServer">Start server</string>
+    <string name="tvUDPport">UDP port:</string>
+    <string name="tvWelcome">UDPPerformance welcomes you!</string>
+    <string name="txtPortEmpty">Port is empty!</string>
+
+</resources>

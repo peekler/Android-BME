@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MapDemo</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_hungary">Magyarország</string>
+    <string name="desc_hungary">Lakosság: 9.700.000</string>
+</resources>
