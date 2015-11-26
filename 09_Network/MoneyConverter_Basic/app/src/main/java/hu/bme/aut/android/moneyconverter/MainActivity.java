@@ -66,7 +66,8 @@ public class MainActivity extends ActionBarActivity {
 
             try {
                 JSONObject rawJson = new JSONObject(rawResult);
-                String hufValue =rawJson.getJSONObject("rates").getString("HUF");
+                String hufValue =rawJson.getJSONObject("rates").
+                        getString("HUF");
                 tvResult.setText(hufValue);
 
             } catch (JSONException e) {

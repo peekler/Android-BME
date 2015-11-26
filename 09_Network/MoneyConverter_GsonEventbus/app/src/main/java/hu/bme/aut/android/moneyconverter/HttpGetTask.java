@@ -73,12 +73,6 @@ public class HttpGetTask extends AsyncTask<String, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        /*Intent intentBrResult = new Intent(FILTER_RESULT);
-        intentBrResult.putExtra(KEY_RESULT,result);
-
-        LocalBroadcastManager.getInstance(
-            ctx).sendBroadcast(intentBrResult);*/
-
         try {
             Gson gson = new Gson();
             MoneyResult moneyResult = gson.fromJson(result,
@@ -88,6 +82,5 @@ public class HttpGetTask extends AsyncTask<String, Void, String> {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 }

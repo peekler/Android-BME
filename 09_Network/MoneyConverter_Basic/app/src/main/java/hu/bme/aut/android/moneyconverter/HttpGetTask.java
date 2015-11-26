@@ -11,9 +11,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-/**
- * Created by Peter on 2015.04.16..
- */
+
 public class HttpGetTask extends AsyncTask<String, Void, String> {
 
     public static final String FILTER_RESULT = "FILTER_RESULT";

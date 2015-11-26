@@ -50,53 +50,18 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        /*LocalBroadcastManager.getInstance(this).registerReceiver(
-                brWeatherReceiver,
-                new IntentFilter(HttpGetTask.FILTER_RESULT)
-        );*/
         EventBus.getDefault().register(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        /*LocalBroadcastManager.getInstance(
-                this).unregisterReceiver(brWeatherReceiver);*/
-
         EventBus.getDefault().unregister(this);
     }
 
     public void onEventMainThread(MoneyResult moneyResult) {
-        tvResult.setText("1 USD is "+
-                moneyResult.getRates().getHUF()+
+        tvResult.setText("1 USD is " +
+                moneyResult.getRates().getHUF() +
                 " HUF");
     }
-
-
-    private BroadcastReceiver brWeatherReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            String rawResult = intent.getStringExtra(
-                    HttpGetTask.KEY_RESULT);
-
-            try {
-                /*JSONObject rawJson = new JSONObject(rawResult);
-                String hufValue =rawJson.getJSONObject("rates").getString("HUF");
-                tvResult.setText(hufValue);*/
-
-                Gson gson = new Gson();
-                MoneyResult moneyResult = gson.fromJson(rawResult,
-                        MoneyResult.class);
-                tvResult.setText("HUF: "+moneyResult.getRates().getHUF()
-                +"\n"
-                +"EUR: "+moneyResult.getRates().getEUR());
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-        }
-    };
-
-
 }

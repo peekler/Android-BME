@@ -47,8 +47,6 @@ public class MainActivity extends ActionBarActivity {
                         Toast.LENGTH_LONG).show();
             }
         });
-
-
     }
 
 

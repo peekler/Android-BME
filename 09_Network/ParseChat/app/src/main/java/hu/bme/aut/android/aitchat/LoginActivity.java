@@ -74,7 +74,8 @@ public class LoginActivity extends AppCompatActivity {
     @OnClick(R.id.btnLogin)
     protected void loginUser() {
         login_progress.setVisibility(View.VISIBLE);
-        ParseUser.logInInBackground(etUserName.getText().toString(), etPassword.getText().toString(), new LogInCallback() {
+        ParseUser.logInInBackground(etUserName.getText().toString(),
+                etPassword.getText().toString(), new LogInCallback() {
             @Override
             public void done(ParseUser user, ParseException e) {
                 login_progress.setVisibility(View.GONE);
