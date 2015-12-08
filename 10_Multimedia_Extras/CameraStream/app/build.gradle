@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 16
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "hu.bme.aut.amorg.examples.cameratextureviewtest"
+        minSdkVersion 16
+        targetSdkVersion 23
+    }
+
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+android {
+    packagingOptions {
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:23.0.1'
+    compile files('libs/commons-codec-1.4.jar')
+    compile files('libs/commons-logging-1.1.1.jar')
+    compile files('libs/httpclient-4.1.2.jar')
+    compile files('libs/httpclient-cache-4.1.2.jar')
+    compile files('libs/httpcore-4.1.2.jar')
+    compile files('libs/httpmime-4.1.2.jar')
+}

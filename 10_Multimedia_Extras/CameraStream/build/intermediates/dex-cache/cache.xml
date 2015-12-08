@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\libs\httpclient-4.1.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c5bf45f7f35857d2c2dccfadf213ff047778a7cb">
+        <dex dex="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\build\intermediates\pre-dexed\debug\httpclient-4.1.2-f09e42d50bb98d696e0313302517aa44cf7f13a9.jar" />
+    </item>
+    <item
+        jar="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\libs\commons-codec-1.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4216af16d38465bbab0f3dff8efa14204f7a399a">
+        <dex dex="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\build\intermediates\pre-dexed\debug\commons-codec-1.4-516700450e08d2dfba8d83e172feca9872835e37.jar" />
+    </item>
+    <item
+        jar="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\libs\httpcore-4.1.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="39e30fb2ddfcf32b9dd663039ca6e847b698aa6f">
+        <dex dex="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\build\intermediates\pre-dexed\debug\httpcore-4.1.2-b021d7a0a9c37c9f8c76c209ee42a22b84248d5e.jar" />
+    </item>
+    <item
+        jar="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\libs\httpclient-cache-4.1.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d120bc4fa4f0ca8a8c92a1cc7093506f68e235a0">
+        <dex dex="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\build\intermediates\pre-dexed\debug\httpclient-cache-4.1.2-eafeba459b03d1e5c30ec4924e220f0ea4a0edaa.jar" />
+    </item>
+    <item
+        jar="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\libs\commons-logging-1.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5043bfebc3db072ed80fbd362e7caf00e885d8ae">
+        <dex dex="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\build\intermediates\pre-dexed\debug\commons-logging-1.1.1-3abc97025fb49d57f86d9a79bad8125e6d200155.jar" />
+    </item>
+    <item
+        jar="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\build\intermediates\pre-dexed\debug\classes-7108a06c5243b1d59e0df35faf1aa67c8ab43479.jar" />
+    </item>
+    <item
+        jar="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-8138e61bcb3c28c52496e5841fe78dbd0836186a.jar" />
+    </item>
+    <item
+        jar="C:\Users\peter\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-991f0df878ec79825e0688b7a2c6fb08fc390684.jar" />
+    </item>
+    <item
+        jar="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\libs\httpmime-4.1.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ed8b5ee0167cb27dea55851259eb34b609f31df0">
+        <dex dex="D:\Development\AndroidStudioProjects\AIT\24\CameraStream\app\build\intermediates\pre-dexed\debug\httpmime-4.1.2-40c02bb7b411d3cdf5e4906052e871cf024510a1.jar" />
+    </item>
+
+</items>

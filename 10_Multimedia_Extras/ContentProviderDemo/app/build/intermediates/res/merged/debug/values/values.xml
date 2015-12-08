@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/D:/Development/_VersionControlled/GIT/Android-BME/10_Multimedia_Mix/ContentProviderDemo/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">ContentProviderDemo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">ContentProviderDemo</string>
+    <!-- From: file:/D:/Development/_VersionControlled/GIT/Android-BME/10_Multimedia_Mix/ContentProviderDemo/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppTheme" parent="android:Theme.Light"/>
+</resources>

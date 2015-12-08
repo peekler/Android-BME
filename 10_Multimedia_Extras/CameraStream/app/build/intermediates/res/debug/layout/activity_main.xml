@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btnPhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take picture" />
+
+    <hu.bme.aut.amorg.examples.cameratextureviewtest.CameraTextureView
+        android:id="@+id/camTextureView"
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        <LinearLayout
+            android:id="@+id/layoutMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</LinearLayout><!-- From: file:/D:/Development/AndroidStudioProjects/Android2015Tavasz/_multimedia/CameraTextureViewTest1/app/src/main/res/layout/activity_main.xml -->

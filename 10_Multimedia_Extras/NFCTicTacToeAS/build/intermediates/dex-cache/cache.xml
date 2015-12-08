@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\peter\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="D:\Development\_VersionControlled\GIT\Android-BME\10_Multimedia_Mix\NFCTicTacToeAS\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-6f64493669740ce519673dadcf548db52cb5fe63.jar" />
+    </item>
+
+</items>

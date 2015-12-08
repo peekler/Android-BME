@@ -1,0 +1,18 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 16
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "hu.bute.daai.amorg.examples"
+        minSdkVersion 16
+        targetSdkVersion 23
+    }
+
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
