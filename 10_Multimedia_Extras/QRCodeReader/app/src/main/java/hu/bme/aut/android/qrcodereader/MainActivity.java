@@ -1,5 +1,7 @@
 package hu.bme.aut.android.qrcodereader;
 
+import android.media.AudioManager;
+import android.media.ToneGenerator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,57 +24,52 @@ public class MainActivity extends AppCompatActivity {
 
     private BarcodeDetector barcodeDetector;
     private CameraSource cameraSource;
+    private CameraSourcePreview preview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        cameraView = (SurfaceView)findViewById(R.id.camera_view);
         barcodeInfo = (TextView)findViewById(R.id.code_info);
+        preview = (CameraSourcePreview) findViewById(R.id.cameraSourcePreview);
 
-        barcodeDetector =
-                new BarcodeDetector.Builder(this)
-                        //.setBarcodeFormats(Barcode.QR_CODE)
-                        .build();
+        setupBarcodeDetector();
+        setupCameraSource();
+    }
 
-        cameraSource = new CameraSource
-                .Builder(this, barcodeDetector)
-                .setRequestedPreviewSize(640, 640)
+    @Override
+    protected void onResume() {
+        super.onResume();
+        startCameraSource();
+    }
+
+
+    private void startCameraSource() {
+        if (cameraSource != null) {
+            try {
+                preview.start(cameraSource);
+            } catch (IOException e) {
+                cameraSource.release();
+                cameraSource = null;
+            }
+        }
+    }
+
+
+    private void setupBarcodeDetector() {
+        barcodeDetector = new BarcodeDetector.Builder(this)
+                //.setBarcodeFormats(Barcode.QR_CODE)
                 .build();
-
-
-
-        cameraView.getHolder().addCallback(new SurfaceHolder.Callback() {
-            @Override
-            public void surfaceCreated(SurfaceHolder holder) {
-                try {
-                    cameraSource.start(cameraView.getHolder());
-                } catch (IOException ie) {
-                    Log.e("CAMERA SOURCE", ie.getMessage());
-                }
-            }
-
-            @Override
-            public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-            }
-
-            @Override
-            public void surfaceDestroyed(SurfaceHolder holder) {
-                cameraSource.stop();
-            }
-        });
 
         barcodeDetector.setProcessor(new Detector.Processor<Barcode>() {
             @Override
             public void release() {
+
             }
 
             @Override
             public void receiveDetections(Detector.Detections<Barcode> detections) {
-                // This function does not run on the UI Thread!!!
-
                 final SparseArray<Barcode> barcodes = detections.getDetectedItems();
 
                 if (barcodes.size() != 0) {
@@ -83,8 +80,42 @@ public class MainActivity extends AppCompatActivity {
                             );
                         }
                     });
+                    playBeep();
                 }
             }
         });
+
+        if (!barcodeDetector.isOperational()) {
+            Log.w("TAG_QR", "Detector dependencies are not yet available.");
+        }
+
     }
+
+    private void setupCameraSource() {
+        cameraSource = new CameraSource.Builder(this, barcodeDetector)
+                .setFacing(CameraSource.CAMERA_FACING_BACK)
+                .setRequestedFps(15.0f)
+                .setRequestedPreviewSize(640, 640)
+                .build();
+    }
+
+    private void playBeep() {
+        ToneGenerator toneGenerator = new ToneGenerator(AudioManager.STREAM_ALARM, ToneGenerator.MAX_VOLUME);
+        toneGenerator.startTone(ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD, 200);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        preview.stop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (cameraSource != null) {
+            cameraSource.release();
+        }
+    }
+
 }

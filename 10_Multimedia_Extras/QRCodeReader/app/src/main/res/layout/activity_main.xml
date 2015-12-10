@@ -5,10 +5,10 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <SurfaceView
-        android:id="@+id/camera_view"
-        android:layout_width="640px"
-        android:layout_height="640px"/>
+    <hu.bme.aut.android.qrcodereader.CameraSourcePreview
+        android:id="@+id/cameraSourcePreview"
+        android:layout_width="320dp"
+        android:layout_height="320dp" />
 
     <TextView
         android:id="@+id/code_info"
