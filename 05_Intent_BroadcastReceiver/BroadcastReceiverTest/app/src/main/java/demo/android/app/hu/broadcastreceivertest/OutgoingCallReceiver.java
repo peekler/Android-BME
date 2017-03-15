@@ -14,8 +14,8 @@ public class OutgoingCallReceiver extends BroadcastReceiver {
         String outNumber = intent.getStringExtra(Intent.EXTRA_PHONE_NUMBER);
         Toast.makeText(context,outNumber,Toast.LENGTH_LONG).show();
 
-        //abortBroadcast();
 
-        //this.setResultData("55555555");
+
+        this.setResultData("567");
     }
 }

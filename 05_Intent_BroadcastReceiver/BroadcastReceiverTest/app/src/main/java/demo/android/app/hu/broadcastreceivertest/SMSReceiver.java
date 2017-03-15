@@ -19,7 +19,8 @@ public class SMSReceiver extends BroadcastReceiver {
             SmsMessage msg = SmsMessage.createFromPdu((byte[]) pdu);
             String origin = msg.getOriginatingAddress();
             String body = msg.getMessageBody();
-            Toast.makeText(context, "SMS catched, number: " + origin + " body: " + body, Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "SMS catched, number: " + origin +
+                    " body: " + body, Toast.LENGTH_LONG).show();
         }
     }
 }
