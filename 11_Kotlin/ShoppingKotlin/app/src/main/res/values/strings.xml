@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ShoppingKotlin</string>
+    <string name="action_delete_all">Delete All</string>
+</resources>
